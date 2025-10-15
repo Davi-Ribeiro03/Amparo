@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 90,
+    marginTop: 60,
   },
   text: {
     fontSize: FONT_SIZES.xlarge,
