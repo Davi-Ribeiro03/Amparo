@@ -11,6 +11,12 @@ const styles = StyleSheet.create({
     marginTop: 80,
     marginBottom: 20,
   },
+  inputs: {
+    flexDirection: "column",
+    gap: 20,
+    width: "90%",
+    marginHorizontal: "auto",
+  },
 });
 
 export default styles;

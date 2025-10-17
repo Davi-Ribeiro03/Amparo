@@ -5,6 +5,8 @@ export const COLORS = {
   screenColor: "#EFEFEF",
   bluePrimary: "#2563EB",
   gray: "#525252",
+  inputGray: "#EFEFEF",
+  lightBlue: "#DBEAFE",
 };
 
 export const FONT_SIZES = {

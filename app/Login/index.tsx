@@ -8,7 +8,7 @@ import * as Google from "expo-auth-session/providers/google"
 import { useRouter } from 'expo-router'
 import * as WebBrowser from "expo-web-browser"
 import React, { useEffect, useState } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import styles from './_styles'
 
 WebBrowser.maybeCompleteAuthSession();
@@ -34,8 +34,11 @@ const Login = () => {
     <Container>
       <Logo/>
       <Text style={styles.loginText}>Login</Text>
-      <Input  placeholder='Digite seu email...' value={email} onChangeText={setEmail}/>
-      <Input placeholder='Digite sua senha...' value={password} onChangeText={setPassword} secureTextEntry/>
+
+      <View style={styles.inputs}>
+        <Input  placeholder='Digite seu email...' value={email} onChangeText={setEmail}/>
+        <Input placeholder='Digite sua senha...' value={password} onChangeText={setPassword} secureTextEntry/>
+      </View>
 
       <Button act={() => handleLogin(email,password)}>Login</Button>
       <TouchableOpacity style={{flexDirection: 'row', gap: 2, justifyContent: 'center', marginTop: 10}} onPress={() => router.push('/Register')}>

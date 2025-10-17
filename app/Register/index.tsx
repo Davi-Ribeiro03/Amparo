@@ -5,7 +5,7 @@ import Input from '@/components/Input/Input'
 import Logo from '@/components/Logo/Logo'
 import { useRouter } from 'expo-router'
 import React, { useState } from 'react'
-import { Text, TouchableOpacity } from 'react-native'
+import { Text, TouchableOpacity, View } from 'react-native'
 import styles from './_styles'
 
 const Register = () => {
@@ -20,10 +20,14 @@ const Register = () => {
     <Container>
       <Logo/>
       <Text style={styles.RegisterText}>Cadastro</Text>
+
+      <View style={styles.inputs}>
+
       <Input  placeholder='Digite seu nome...' value={name} onChangeText={setName}/>
       <Input  placeholder='Digite seu email...' value={email} onChangeText={setEmail}/>
       <Input placeholder='Digite sua senha...' value={password} onChangeText={setPassword} secureTextEntry/>
       <Input placeholder='Digite sua senha novamente...' value={repeatPassword} onChangeText={setRepeatPassword} secureTextEntry/>
+      </View>
 
       <Button act={() => handleRegister(name,email,password)}>Cadastrar</Button>
       <TouchableOpacity style={{flexDirection: 'row', gap: 2, justifyContent: 'center', marginTop: 10}} onPress={() => router.push('/Login')}>
